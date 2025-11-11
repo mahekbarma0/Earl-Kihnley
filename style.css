@@ -137,8 +137,8 @@ body {
 /* Force each image to be a fixed size and prevent global img rules overriding */
 .image-row > img {
   flex: 0 0 auto !important;      /* prevents growing/shrinking */
-  width: 120px !important;        /* desired width */
-  height: 120px !important;       /* desired height */
+  width: 150px !important;        /* desired width */
+  height: 150px !important;       /* desired height */
   max-width: none !important;
   object-fit: cover !important;
   border-radius: 10px !important;
