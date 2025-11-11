@@ -146,8 +146,12 @@ body {
 }
 
 .blink-link {
-  color: rgba(255, 165, 0, 0.8);
+  display: block;
+  text-align: center;
+  margin-top: 40vh; /* Pushes it to vertical middle */
+  font-size: 48px; /* Big text size */
   font-weight: bold;
+  color: rgba(255, 165, 0, 0.8);
   text-decoration: none;
   animation: blink 1s infinite;
   cursor: pointer;
@@ -158,7 +162,6 @@ body {
   50%  { opacity: 0; }
   100% { opacity: 1; }
 }
-
 
 @media (max-width: 1200px) {
   .gif-grid {
