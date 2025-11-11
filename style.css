@@ -121,41 +121,28 @@ body {
   margin-top: 5px;
   color: #ccc;
 }
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 15px;
-  align-items: center;
-  padding: 20px;
+/* Put this at the end of your CSS (or in a <style> at bottom of page) */
+.image-row {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: nowrap !important; /* use wrap if you want rows on small screens */
+  width: 100% !important;
 }
 
-.image-container img {
-  width: 100%;
-  height: 120px; /* fixes same height for all */
-  object-fit: cover; /* prevents distortion */
-  border-radius: 12px; /* nice rounded corners */
-}
-
-/* For medium screens */
-@media (max-width: 1200px) {
-  .image-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-/* For tablets */
-@media (max-width: 768px) {
-  .image-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* For mobile */
-@media (max-width: 480px) {
-  .image-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Force each image to be a fixed size and prevent global img rules overriding */
+.image-row > img {
+  flex: 0 0 auto !important;      /* prevents growing/shrinking */
+  width: 120px !important;        /* desired width */
+  height: 120px !important;       /* desired height */
+  max-width: none !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  display: block !important;
 }
 
 
